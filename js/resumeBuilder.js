@@ -18,7 +18,7 @@ var bio = {
     "Familiar with Operating systems and Database Systems"]
 };
 
-function displayBio(){
+(function displayBio(){
     var formattedName = HTMLheaderName.replace("%data%",bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
     var formattedImage = HTMLbioPic.replace("%data%",bio.image);
@@ -34,9 +34,8 @@ function displayBio(){
     var formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
     $("#topContacts").append(formattedMobile,formattedEmail,formattedGithub,formattedLocation);
 
-}
+})();
 
-displayBio();
 
 
 var work = {
@@ -54,7 +53,7 @@ var work = {
 
 
 
-function displayWork(){
+(function displayWork(){
     for(job in work.jobs){
         $("#workExperience").append(HTMLworkStart);
         var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
@@ -67,9 +66,8 @@ function displayWork(){
         var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description);
         $(".work-entry:last").append(formattedDescription);
     }
-}
+})();
 
-displayWork();
 
 var education = {
     "schools" : [{
@@ -90,7 +88,7 @@ var education = {
 
 };
 
-function displayEduction(){
+(function displayEduction(){
 
     for(var i=0; i<education.schools.length; ++i){
         $("#education").append(HTMLschoolStart);
@@ -102,8 +100,8 @@ function displayEduction(){
         $(".education-entry:last").append(formattedSchoolName+formattedSchoolDegree,formattedSchoolDates,
             formattedSchoolLocation,formattedSchoolMajor);
     }
-}
-displayEduction();
+})();
+
 
 var project = {
     "projects" : [{
@@ -141,7 +139,7 @@ var project = {
     ]
 };
 
-function displayProject(){
+(function displayProject(){
     for(var i=0; i<project.projects.length; ++i){
         $("#projects").append(HTMLprojectStart);
         var formattedProjectTitle = HTMLprojectTitle.replace("%data%",project.projects[i].title);
@@ -149,8 +147,7 @@ function displayProject(){
         var formattedProjectDescription = HTMLprojectDescription.replace("%data%",project.projects[i].description);
         $(".project-entry:last").append(formattedProjectTitle,formattedProjectDate,formattedProjectDescription);
     }
-}
+})();
 
-displayProject();
 
 
