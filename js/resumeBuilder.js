@@ -75,7 +75,7 @@ var education = {
     "schools" : [{
             "name" : "University of Rochester",
             "location" : "Rochester, NY",
-            "degree" : "Masters",
+            "degree" : "Master",
             "major" : ["Electrical and Computer Engineering"],
             "dates" : "2015-2017"
         },
@@ -120,6 +120,12 @@ var project = {
             "<br>Implemented Hadoop Streaming program in Python for MapReduce."
         },
         {
+            "title":"Frogger game",
+            "dates":"02/2017",
+            "description":"Developed a classic arcade game with JavaScript."+
+            "<br>IDesigned and implemented User interface with Bootstrap, jQuery and HTML5 Canvas API."
+        },
+        {
             "title":"Face Recognition in the Wild",
             "dates":"03/2016-05/2016",
             "description":"Used fish vector to aggregate dense SIFT features into GMM."+
@@ -130,13 +136,8 @@ var project = {
             "dates":"03/2016-05/2016",
             "description":"Implemented collaborative filtering algorithm."+
             "<br>Revised the algorithm by rounding and introducing friends’ influence."
-        },
-        {
-            "title":"Image Registration for High Dynamic Range Image",
-            "dates":"11/2015-12/2015",
-            "description":"Used histogram mapping to remove ghosting."+
-            "<br>Implemented global registration algorithm base on median threshold bitmap."
         }
+
     ]
 };
 
